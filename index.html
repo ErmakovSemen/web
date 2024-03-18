@@ -62,32 +62,6 @@
         <p class="footer-text">&copy; 2024 Я - студент ВШЭ. Все права защищены.</p>
     </footer>
 
-<script>
-    let recordButton = document.getElementById('recordButton');
-    let audioPlayback = document.getElementById('audioPlayback');
-    let textForm = document.getElementById('textForm');
-    let textInput = document.getElementById('textInput');
-
-    let mediaRecorder;
-    let audioChunks;
-
-    // Обработка записи аудиосообщения
-    recordButton.addEventListener('click', function() {
-        if (!mediaRecorder || mediaRecorder.state == "inactive") {
-            // [Оставляем код обработки аудиосообщения без изменений]
-        } else if (mediaRecorder.state == "recording") {
-            mediaRecorder.stop();
-            recordButton.textContent = 'Записать аудиосообщение';
-        }
-    });
-
-    // Обработка отправки текстовых сообщений
-    textForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        let message = textInput.value;
-        console.log('Текстовое сообщение получено:', message);
-        textInput.value = ''; // Очистка поля ввода
-    });
-</script>
+<script src="scripts.js"></script>
 </body>
 </html>
