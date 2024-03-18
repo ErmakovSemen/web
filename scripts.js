@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+window.onload = function () {
     let textForm = document.getElementById('textForm');
     let textInput = document.getElementById('textInput');
     let recordButton = document.getElementById('recordButton');
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        alert(response); // используем alert для упрощения вывода ответа
+        alert(response); // Временное решение для вывода ответа
         textInput.value = ''; // очищаем текстовое поле ввода
     });
 
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 mediaRecorder.start();
                 recordButton.textContent = 'Остановить запись';
             }).catch(function(err) {
-                console.log('Не удалось начать запись аудио: ', err);
+                console.error('Не удалось начать запись аудио: ', err);
             });
         }
     });
@@ -58,4 +58,4 @@ document.addEventListener('DOMContentLoaded', function () {
         recordButton.textContent = 'Записать аудиосообщение';
         audioChunks = [];
     }
-});
+};
